@@ -1,0 +1,9 @@
+PASS  r1-app.js
+PASS  r1-bridge.js
+PASS  theoryData.js
+PASS  gameDataV2.js
+
+Vertical deck checks:
+PASS  vertical theory/action deck rendering
+PASS  vertical wheel control labels
+PASS  compact readability CSS
