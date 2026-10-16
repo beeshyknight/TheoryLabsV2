@@ -1,0 +1,8 @@
+THEORY LAB r1 v3.3 COMPLETE
+
+1. Delete/replace the files in the root of your existing GitHub Pages repository.
+2. Upload ALL contents of this folder.
+3. Commit to main.
+4. In GitHub > Actions, wait for the Pages deployment to show a green tick.
+5. Open your existing GitHub Pages URL in a browser first.
+6. Reopen the Creation on r1. Your existing QR/Creation URL does not need to change.

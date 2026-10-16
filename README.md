@@ -1,19 +1,48 @@
-# Theory Lab r1 v3.2.1 – self-contained hotfix
+# Theory Lab r1 — v3.3 Complete
 
-This build fixes the blank-screen failure seen after the v3.2 vertical update.
+Complete Rabbit r1 deployment package.
 
-## What changed
-- `index.html` is now self-contained: CSS, theory data, intervention/Joker data, r1 bridge and game engine are all bundled into one file.
-- No JavaScript modules are required at runtime.
-- Missing `js/` or `css/` paths can no longer leave the Creation blank.
-- A visible startup/error screen is included, so a future runtime error will show a message rather than an empty display.
-- The v3.2 vertical wheel deck and smaller text are retained.
-- Images remain in `assets/images/`; if an image fails, the game still runs.
+This build combines the reliable single-file v3.2.1 runtime with the full original Theory Lab asset set. It includes the vertical wheel-scrolling interface, smaller/tighter text, full theory/case/intervention/Joker data, Story Mode, Endless Casework and Pass-the-Device.
 
-## Update GitHub Pages
-Replace the files in the root of your existing repository with the contents of this folder. The important files are `index.html` and the `assets` folder.
+## Upload to GitHub Pages
 
-Keep the same repository and the same GitHub Pages URL. You do not need a new Creation QR code. Commit the changes to `main`, wait for the Pages deployment to finish, then reload/reopen the Creation on the r1.
+Upload the CONTENTS of this folder to the root of the same GitHub repository you already use for the Creation.
 
-## Test first
-Open `index.html` directly on a computer, or serve the folder locally and open `dev.html`. This hotfix does not require module hosting for the main app.
+The root should contain:
+
+- `index.html`
+- `dev.html`
+- `README.md`
+- `assets/`
+
+Keep GitHub Pages configured as:
+
+- Source: Deploy from a branch
+- Branch: `main`
+- Folder: `/ (root)`
+
+Because the URL does not change, your existing Rabbit Creation QR can continue to point to the same GitHub Pages address.
+
+## What is updated
+
+- Vertical wheel navigation through theory cards, interventions and professional Wild/Joker cards.
+- More compact typography for the 240×282 display.
+- Centred/current card is visually emphasised.
+- Long press opens fuller detail.
+- Main runtime is self-contained in `index.html`, reducing the risk of a blank screen if an external JS/CSS file fails to load.
+- Startup error handling is included so failures do not silently present a blank screen.
+- Full original image and audio asset set is included.
+
+## Desktop testing
+
+From this folder run:
+
+```bash
+python -m http.server 8000
+```
+
+Then open:
+
+`http://localhost:8000/dev.html`
+
+The simulator provides wheel up/down, side-click and long-press controls.
